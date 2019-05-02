@@ -4,26 +4,19 @@
   <head>
     <title>My project</title>
     <meta charset="utf-8">
-    <meta name="description" content="My project">
-    <meta name="author" content="Me">
     <link rel="stylesheet" href="css/CETEIcean.css" media="all" />
     <link rel="stylesheet" href="css/style.css" media="all" />
     <script src="js/CETEI.js"></script>
   </head>
 
   <body>
-    <h1>My project</h1>
-    <div id="description">My 500 words.</div>
-    <div id="article1"></div>
-    <div id="article2"></div>
+
+    <div id="TEI"></div>
+
     <script>
-      var c1 = new CETEI()
-      c1.getHTML5("data/example.xml", function(data) {
-       document.getElementById("article1").appendChild(data)
-      })
-      var c2 = new CETEI()
-      c2.getHTML5("data/example.xml", function(data) {
-       document.getElementById("article2").appendChild(data)
+      var CETEIcean = new CETEI()
+      CETEIcean.getHTML5("data/example.xml", function(data) {
+        document.getElementById("TEI").appendChild(data)
       })
     </script>
   </body>
