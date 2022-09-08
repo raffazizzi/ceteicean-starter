@@ -19,7 +19,7 @@
       <body>
          <div>
            <head>Hello World!</head>
-           <p>This is a TEI example file.</p>
+           <p>This is a <ref target="https://tei-c.org">TEI</ref> example file.</p>
          </div>
       </body>
   </text>
