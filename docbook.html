@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>My project - Docbook</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/CETEIcean.css" media="all" />
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <script src="js/CETEI.js"></script>
+  </head>
+
+  <body>
+
+    <div id="DB"></div>
+
+    <script>
+      var CETEIcean = new CETEI()
+      CETEIcean.addBehaviors({"namespaces":
+        {"db": "http://docbook.org/ns/docbook", "xlink": "http://www.w3.org/1999/xlink"},
+        "db" : {
+          "link": ["<a href=\"$rw@xlink:href\">","</a>"],
+        }
+      });
+      CETEIcean.getHTML5("data/docbookexample.xml", function(data) {
+        document.getElementById("DB").appendChild(data)
+      });
+    </script>
+  </body>
+
+</html>
